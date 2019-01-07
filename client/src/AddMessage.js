@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Mutation } from "react-apollo";
 import gql from "graphql-tag";
+import id from "short-id";
 
 export default class AddMessage extends Component {
   constructor() {
@@ -23,6 +24,7 @@ export default class AddMessage extends Component {
       <div>
         {inputFields.map(field => (
           <input
+            key={id.generate()}
             placeholder={field}
             name={field}
             onChange={e => this.handleChange(e)}
