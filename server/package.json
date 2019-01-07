@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "start": "npm run build && node dist/server.js"
+    "start": "npm run build && node dist/index.js"
   },
   "devDependencies": {
     "rimraf": "^2.6.3"
